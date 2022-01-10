@@ -1,4 +1,4 @@
-FROM jrei/systemd-debian
+FROM jrei/systemd-ubuntu
 ENV SHELL /bin/bash
 RUN apt-get update \
     && apt-get install -y wget procps \
@@ -7,4 +7,4 @@ RUN apt-get update \
     && rm ./install.sh \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 VOLUME [ "/etc/x-ui" ]
-EXPOSE 54321
+EXPOSE 80
